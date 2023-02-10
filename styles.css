@@ -1,0 +1,145 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Roboto';
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 70px;
+}
+h1{
+    text-transform: capitalize;
+    font-size: 3.2rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    text-align: left;
+
+}
+table tr:nth-child(even){
+    background-color: rgb(231, 231, 231);
+}
+table tr:nth-child(odd){
+    background-color: rgb(248, 248, 248);
+}
+td{
+    min-width:fit-content;
+    width: 240px;
+}
+th, td{
+    padding: 14px;
+}
+td{
+    font-size: 1.4rem;
+}
+tr{
+    border: 1px solid rgb(221, 221, 221);
+}
+button{
+    border-radius: 4px;
+    font-weight: 700;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.remove{
+    padding: 7px 18px;
+    border: none;
+    background-color: crimson;
+    color: #fff;
+}
+th{
+    font-weight: 900;
+    font-size: 2rem;
+}
+.bookname{
+    font-style: italic;
+}
+.authorname{
+    text-transform: capitalize;
+}
+#new-book-btn{
+    padding: 14px 24px;
+    background-color: green;
+    border: none;
+    color: #fff;
+}
+#new-book-btn:hover{
+    color: green;
+    background-color: #fff;
+    border: 3px solid green;
+}
+.container{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 340px;
+    line-height: 3.4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: rgb(236, 208, 208);
+}
+input:not([type="checkbox"]){
+    width: 100%;
+    height: 4rem;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 1px solid rgb(206, 202, 202);
+    font-size: 2rem;
+    font-weight: 300;
+    border-radius: 3px;
+}
+input:not([type="checkbox"]):focus{
+    outline: none;
+}
+#add-book{
+    display: block;
+    padding: 10px 18px;
+    margin: 0 auto;
+    background-color: green;
+    border: none;
+    border-radius: 2px;
+    color: aliceblue;
+    margin-top: 2rem;
+}
+input[type="checkbox"]
+{
+    accent-color: green;
+    margin: 0 1.1rem 0 0;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+label{
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(136, 61, 61);
+}
+input[type="number"]{
+    appearance: textfield;
+}
+form{
+    margin: 3rem;
+}
+label[for="read-it"]{
+    font-size: 1.4rem;
+    color: rgb(23, 34, 34);
+}
