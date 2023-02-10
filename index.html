@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <link rel="shortcut icon" href="/library-favicon.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <img src="library-logo.png" alt="">
+        <h1>my library</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Number of pages</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td class="bookname">Bookname</td>
+                        <td class="authorname">Author</td>
+                        <td>Pages</td>
+                        <td>Read</td>
+                        <td><button class="remove">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td class="bookname">Bookname</td>
+                        <td class="authorname">Author</td>
+                        <td>Pages</td>
+                        <td>Read</td>
+                        <td><button class="remove">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td class="bookname">Bookname</td>
+                        <td class="authorname">Author</td>
+                        <td>Pages</td>
+                        <td>Read</td>
+                        <td><button class="remove">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td class="bookname">Bookname</td>
+                        <td class="authorname">Author</td>
+                        <td>Pages</td>
+                        <td>Read</td>
+                        <td><button class="remove">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td class="new-book"><button id="new-book-btn">NEW BOOK</button></td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+
+
+        <div class="container">
+            <form action="" method="post">
+                <label for="">Title</label>
+                <input type="text"  required/>
+                <label for="">Author</label>
+                <input type="text"  required/>
+                <label for="">No. of Pages</label>
+                <input type="number" min="70" required>
+                <input type="checkbox" name="" id="read-it">
+                <label for="read-it">I have read this book</label>
+                <button id="add-book" type="submit">ADD TO LIBRARY</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
