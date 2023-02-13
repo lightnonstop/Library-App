@@ -9,93 +9,33 @@ html{
 }
 body{
     min-height: 100vh;
-    font-family: 'Roboto';
+    font-family: 'Roboto', monospace;
+    background-color: rgb(226, 224, 226);
 }
 header{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
     gap: 2rem;
-    margin-bottom: 70px;
 }
-h1{
-    text-transform: capitalize;
-    font-size: 3.2rem;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-table, th, td{
-    border-collapse: collapse;
-    text-align: left;
-
-}
-table tr:nth-child(even){
-    background-color: rgb(231, 231, 231);
-}
-table tr:nth-child(odd){
-    background-color: rgb(248, 248, 248);
-}
-td{
-    min-width:fit-content;
-    width: 240px;
-}
-th, td{
-    padding: 14px;
-}
-td{
-    font-size: 1.4rem;
-}
-tr{
-    border: 1px solid rgb(221, 221, 221);
-}
-button{
-    border-radius: 4px;
-    font-weight: 700;
+header img{
+    width: 90px;
 }
 button:hover{
     cursor: pointer;
-    opacity: 0.8;
-}
-.remove{
-    padding: 7px 18px;
-    border: none;
-    background-color: crimson;
-    color: #fff;
-}
-th{
-    font-weight: 900;
-    font-size: 2rem;
-}
-.bookname{
-    font-style: italic;
-}
-.authorname{
-    text-transform: capitalize;
-}
-#new-book-btn{
-    padding: 14px 24px;
-    background-color: green;
-    border: none;
-    color: #fff;
-}
-#new-book-btn:hover{
-    color: green;
-    background-color: #fff;
-    border: 3px solid green;
+    opacity: 0.7;
 }
 .container{
-    position: absolute;
-    top: 4px;
-    left: 4px;
+    height: 460px;
+    min-width: 100px;
+    display: none;
+    margin: 0 auto;
     width: 340px;
-    line-height: 3.4rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background-color: rgb(236, 208, 208);
+    background-color: #fff;
+    border-radius: 7px;
 }
 input:not([type="checkbox"]){
     width: 100%;
@@ -108,7 +48,7 @@ input:not([type="checkbox"]){
     font-weight: 300;
     border-radius: 3px;
 }
-input:not([type="checkbox"]):focus{
+input:not([type="radio"]):focus{
     outline: none;
 }
 #add-book{
@@ -121,10 +61,10 @@ input:not([type="checkbox"]):focus{
     color: aliceblue;
     margin-top: 2rem;
 }
-input[type="checkbox"]
+input[type="radio"]
 {
     accent-color: green;
-    margin: 0 1.1rem 0 0;
+    margin: 2rem 1.1rem 2rem 0;
     width: 1.4rem;
     height: 1.4rem;
 }
@@ -142,4 +82,100 @@ form{
 label[for="read-it"]{
     font-size: 1.4rem;
     color: rgb(23, 34, 34);
+}
+.wrap-close{
+    text-align: right;
+}
+.wrap-close img{
+    cursor: pointer;
+    width: 2.4rem;
+    margin: 1rem;
+    vertical-align: middle;
+    font-weight: 700;
+}
+.library{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+.wrapper{
+    width: 300px;
+    background-color: #fff;
+    line-height: 2.7rem;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.wrapper > h2{
+    font-size: 2rem;
+}
+li{
+    font-size: 2.4rem;
+    font-weight: 700;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+li span{
+    font-weight: 300;
+    font-size: 1.4rem;
+    display: block;
+    margin-top: -0.4rem;
+}
+.remove{
+    padding: 1rem 2rem;
+    border: none;
+    background-color: rgb(241, 26, 69);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+}
+hr{
+    border: none;
+    margin-bottom: 3rem;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: hidden;
+    height: 4px;
+}
+.italic{
+    font-style: italic;
+    font-size: 2rem;
+}
+
+#new-book-btn{
+    padding: 1rem 4rem;
+    background-color: green;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.7rem;
+    border-radius: 4px;
+}
+.wrap-new-book{
+    padding: 4rem;
+    margin-top: -4rem;
+}
+
+#status{
+    text-transform: uppercase;
+    padding: 0.3rem 2rem;
+    border: none;
+    background-color: rgb(245, 238, 238);
+    float: right;
+    font-size: 2rem;
+}
+label[for="unread"]{
+    float: right;
 }
